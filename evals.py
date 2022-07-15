@@ -15,7 +15,8 @@ from sklearn.model_selection import KFold
 from scipy import interpolate
 import sklearn
 from sklearn.decomposition import PCA
-
+import larq
+import sys
 
 class eval_callback(tf.keras.callbacks.Callback):
     def __init__(self, basic_model, test_bin_file, batch_size=128, save_model=None, eval_freq=1, flip=True, PCA_acc=False):
@@ -90,7 +91,7 @@ class eval_callback(tf.keras.callbacks.Callback):
         # tf.print("embs.shape: ", embs.shape)
         # if np.isnan(embs).sum() != 0:
         if not np.alltrue(np.isfinite(embs)):
-            tf.print("NAN in embs, not a good one")
+            tf.print("NAN in embs, not a good one",output_stream=sys.stdout)
             return
         self.embs = embs
         embs = normalize(embs)
@@ -114,15 +115,15 @@ class eval_callback(tf.keras.callbacks.Callback):
             acc2, std2 = np.mean(accuracy), np.std(accuracy)
             tf.print(
                 "\n>>>> %s evaluation max accuracy: %f, thresh: %f, previous max accuracy: %f, PCA accuray = %f ± %f"
-                % (self.test_names, acc_max, self.acc_thresh, self.max_accuracy, acc2, std2)
+                % (self.test_names, acc_max, self.acc_thresh, self.max_accuracy, acc2, std2), output_stream=sys.stdout
             )
         else:
             tf.print(
-                "\n>>>> %s evaluation max accuracy: %f, thresh: %f, previous max accuracy: %f" % (self.test_names, acc_max, self.acc_thresh, self.max_accuracy)
+                "\n>>>> %s evaluation max accuracy: %f, thresh: %f, previous max accuracy: %f" % (self.test_names, acc_max, self.acc_thresh, self.max_accuracy), output_stream=sys.stdout
             )
 
         if acc_max >= self.max_accuracy:
-            tf.print(">>>> Improved = %f" % (acc_max - self.max_accuracy))
+            tf.print(">>>> Improved = %f" % (acc_max - self.max_accuracy), output_stream=sys.stdout)
             self.max_accuracy = acc_max
             if self.save_model:
                 save_name_base = "%s_basic_%s_epoch_" % (self.save_model, self.test_names)
@@ -130,8 +131,13 @@ class eval_callback(tf.keras.callbacks.Callback):
                 for ii in glob2.glob(save_path_base + "*.h5"):
                     os.remove(ii)
                 save_path = save_path_base + "%s_%f.h5" % (cur_step, self.max_accuracy)
-                tf.print("Saving model to: %s" % (save_path))
+                tf.print("Saving model to: %s" % (save_path), output_stream=sys.stdout)
                 self.basic_model.save(save_path, include_optimizer=False)
+                if "binary" in self.save_model.lower():
+                    with larq.context.quantized_scope(True):
+                        save_path_binary = save_path_base + "%s_binary_%f.h5" % (cur_step, self.max_accuracy)
+                        tf.print("Saving model to: %s" % (save_path_binary), output_stream=sys.stdout)
+                        self.basic_model.save(save_path_binary)
 
 
 def calculate_roc(thresholds, embeddings1, embeddings2, actual_issame, nrof_folds=10, pca=0):

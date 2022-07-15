@@ -59,7 +59,7 @@ class ArcfaceLoss(tf.keras.losses.Loss):
         # self.norm_logits = tf.Variable(tf.zeros([512, 93431]), dtype="float32", trainable=False)
         # self.y_true = tf.Variable(tf.zeros([512, 93431], dtype="int32"), dtype="int32", trainable=False)
 
-    def call(self, y_true, norm_logits):
+    def call(self, y_true, norm_logits, variables=None):
         # norm_logits = y_pred
         # self.norm_logits.assign(norm_logits)
         # self.y_true.assign(y_true)
