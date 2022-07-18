@@ -69,8 +69,8 @@ def resize_dataset(dataset_dir, target_shape=224):
         cv2.imwrite(target_imm, cv2.resize(imm, (target_shape, target_shape), interpolation=cv2.INTER_CUBIC))
 
 
-""" CUDA_VISIBLE_DEVICES='-1' ./prepare_data.py -D /datasets/faces_emore """
-""" CUDA_VISIBLE_DEVICES='-1' ./prepare_data.py -D /datasets/faces_emore -T lfw.bin cfp_fp.bin agedb_30.bin """
+""" CUDA_VISIBLE_DEVICES='-1' python ./prepare_data.py -D /datasets/faces_emore """
+""" CUDA_VISIBLE_DEVICES='-1' python ./prepare_data.py -D /datasets/faces_emore -T lfw.bin cfp_fp.bin agedb_30.bin """
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument("-D", "--dataset_dir", type=str, required=True, help="MXnet record dataset directory")
