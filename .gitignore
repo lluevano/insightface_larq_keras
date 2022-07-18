@@ -3,3 +3,4 @@ checkpoints/*
 *.npz
 __pycache__/*
 *.log
+.idea/*
