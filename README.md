@@ -23,7 +23,7 @@
   ### Accuracy
   
   Train: ms-celeb-1M
-  | Method/Dataset | lfw | cfp_fp | agedb_30 | SCFace FT | QMUL+SurvFace FT | Casia WebFace LR FT |
+  | Method/Dataset | lfw | cfp_fp | agedb_30 | SCFace-FT | QMUL+SurvFace-FT | Casia WebFace LR FT |
   | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
   | BinaryDenseNet45 | pend | pend | pend | pend | pend | pend |
   | BinaryDenseNet37 | pend | pend | pend | pend | pend | pend |
