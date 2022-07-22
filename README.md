@@ -1,6 +1,6 @@
 # ___Keras insightface with LARQ framework integration___
 ***
-  This is the keras (Tensorflow v2.5) implementation of [deepinsight/insightface](https://github.com/deepinsight/insightface) integrated with the [Larq](https://github.com/larq/larq) framework for binary and quantized networks (v0.11.2), and is released under the MIT License. There is no limitation for both acadmic and commercial usage.
+  This is the keras (Tensorflow v2.8) implementation of [deepinsight/insightface](https://github.com/deepinsight/insightface) integrated with the [Larq](https://github.com/larq/larq) framework for binary and quantized networks (v0.12.2), and is released under the MIT License. There is no limitation for both acadmic and commercial usage.
   
   The original Keras insightface base code is available at [leondgarse/Keras_insightface](https://github.com/leondgarse/Keras_insightface)
 
