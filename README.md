@@ -6,6 +6,31 @@
 
   The training data containing the annotation (and the models trained with these data) are available for non-commercial research purposes only.
   
+  Trained models are available at this [Google Drive link](https://drive.google.com/drive/folders/1XDezVnG-4brzIQ-2C1d0TstGaNy00_CV?usp=sharing)
+  
+  ## Binary Network Summary (for 112x112 input)
+  
+  ### Efficiency
+  
+  | Method | Quantizer | Params | Memory | Binary MACs | Full Precision MACs |
+  | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+  | BinaryDenseNet45 | ste_sign | 13.1 M | 4.29 MiB | 1.59 G | 59.71 M |
+  | BinaryDenseNet37 | ste_sign | 13.1 M | 4.29 MiB | 1.12 G | 48.97 M |
+  | BinaryDenseNet28 | ste_sign | 4.55 M | 1.84 MiB | 893.25 M | 49.99 M |
+  | QuickNet | ste_sign | 12.7 M | 2.21 MiB | 431.75 M | 6.85 M |
+  | **BinaryFaceNet** | DoReFa | 506 K | 1.32 MiB | 184.99 M | 3.85 M |
+
+  ### Accuracy
+  
+  Train: ms-celeb-1M
+  | Method/Dataset | lfw | cfp_fp | agedb_30 | SCFace FT | QMUL+SurvFace FT | Casia WebFace LR FT |
+  | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+  | BinaryDenseNet45 | pend | pend | pend | pend | pend | pend |
+  | BinaryDenseNet37 | pend | pend | pend | pend | pend | pend |
+  | BinaryDenseNet28 |  99.17% | 92.11% | 90.72% | pend | pend | pend|
+  | QuickNet | 98.97% | 92.00% | 89.00% | lfw_7: 61.85% <br/> lfw_7_hr2lr_interArea: 53.02% <br/> lfw_14: 85.55% <br/> lfw_14_hr2lr_interArea: 75.27% | lfw_28_lr2lr: 79.32% <br/> lfw_21_lr2lr: 77.38% <br/> lfw_14_lr2lr: 74.45% <br/> lfw_7_lr2lr: 67.70% | pend |
+  | **BinaryFaceNet** | 95.07% | 77.93% | 75.12% | lfw_7: 63.63% <br/> lfw_7_hr2lr_interArea: 58.75% <br/> lfw_14: 80.35% <br/> lfw_14_hr2lr_interArea: 78.18% | lfw_28_lr2lr: 84.93% <br/> lfw_21_lr2lr: 82.48% <br/> lfw_14_lr2lr: 75.55% <br/> lfw_7_lr2lr: 67.53% | pend |
+  
   The rest of the README.md details the functionality of the base code.
 
 # License
