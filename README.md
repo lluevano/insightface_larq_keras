@@ -23,13 +23,13 @@
   ### Accuracy
   
   Train: ms-celeb-1M
-  | Method/Dataset | lfw | cfp_fp | agedb_30 | SCFace-FT | QMUL+SurvFace-FT | Casia WebFace LR FT |
-  | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-  | BinaryDenseNet45 | pend | pend | pend | pend | pend | pend |
-  | BinaryDenseNet37 | pend | pend | pend | pend | pend | pend |
-  | BinaryDenseNet28 |  99.17% | 92.11% | 90.72% | pend | pend | pend|
-  | QuickNet | 98.97% | 92.00% | 89.00% | lfw_7: 61.85% <br/> lfw_7_hr2lr_interArea: 53.02% <br/> lfw_14: 85.55% <br/> lfw_14_hr2lr_interArea: 75.27% | lfw_28_lr2lr: 79.32% <br/> lfw_21_lr2lr: 77.38% <br/> lfw_14_lr2lr: 74.45% <br/> lfw_7_lr2lr: 67.70% | pend |
-  | **BinaryFaceNet** | 95.07% | 77.93% | 75.12% | lfw_7: 63.63% <br/> lfw_7_hr2lr_interArea: 58.75% <br/> lfw_14: 80.35% <br/> lfw_14_hr2lr_interArea: 78.18% | lfw_28_lr2lr: 84.93% <br/> lfw_21_lr2lr: 82.48% <br/> lfw_14_lr2lr: 75.55% <br/> lfw_7_lr2lr: 67.53% | pend |
+  | Method/Dataset | lfw | cfp_fp | agedb_30 | SCFace-FT | QMUL+SurvFace-FT | Casia WebFace LR FT | Faces_webface_lr-FT |
+  | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |  ------------- |
+  | BinaryDenseNet45 | 99.28% | 92.89% | 91.03% | pend | pend | pend | pend |
+  | BinaryDenseNet37 | 99.17% | 92.59% | 90.72% | pend | pend | pend | pend |
+  | BinaryDenseNet28 |  99.17% | 92.11% | 90.72% | pend | pend | pend| pend |
+  | QuickNet | 98.97% | 92.00% | 89.00% | lfw_7: 61.85% <br/> lfw_7_hr2lr_interArea: 53.02% <br/> lfw_14: 85.55% <br/> lfw_14_hr2lr_interArea: 75.27% | lfw_28_lr2lr: 79.32% <br/> lfw_21_lr2lr: 77.38% <br/> lfw_14_lr2lr: 74.45% <br/> lfw_7_lr2lr: 67.70% | lfw_28_hr2lr_interArea: 91.17% <br/> lfw_14_hr2lr_interArea: 94.57% <br/> lfw_7_hr2lr_interArea: 89.15% | lfw: 97.87% <br/> lfw_56: 97.88% <br/> lfw_28: 97.23% <br/> lfw_14: 92.93% <br/> lfw_7: 81.22% |
+  | **BinaryFaceNet** | 95.07% | 77.93% | 75.12% | lfw_7: 63.63% <br/> lfw_7_hr2lr_interArea: 58.75% <br/> lfw_14: 80.35% <br/> lfw_14_hr2lr_interArea: 78.18% | lfw_28_lr2lr: 84.93% <br/> lfw_21_lr2lr: 82.48% <br/> lfw_14_lr2lr: 75.55% <br/> lfw_7_lr2lr: 67.53% | pend | pend |
   
   The rest of the README.md details the functionality of the base code.
 
