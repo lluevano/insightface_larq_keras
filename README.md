@@ -27,7 +27,7 @@
   | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |  ------------- |
   | BinaryDenseNet45 | 99.28% | 92.89% | 91.03% | pend | pend | pend | pend |
   | BinaryDenseNet37 | 99.17% | 92.59% | 90.72% | pend | pend | pend | pend |
-  | BinaryDenseNet28 |  99.17% | 92.11% | 90.72% | pend | pend | pend| pend |
+  | BinaryDenseNet28 |  99.17% | 92.11% | 90.72% | lfw_7: 61.63% <br/> lfw_7_hr2lr_interArea: 55.30% <br/> lfw_14: 84.97% <br/> lfw_14_hr2lr_interArea: 78.13% | lfw_28_lr2lr: 75.80% <br/> lfw_21_lr2lr: 73.15% <br/> lfw_14_lr2lr: 72.98% <br/> lfw_7_lr2lr: 68.37% | pend| pend |
   | QuickNet | 98.97% | 92.00% | 89.00% | lfw_7: 61.85% <br/> lfw_7_hr2lr_interArea: 53.02% <br/> lfw_14: 85.55% <br/> lfw_14_hr2lr_interArea: 75.27% | lfw_28_lr2lr: 79.32% <br/> lfw_21_lr2lr: 77.38% <br/> lfw_14_lr2lr: 74.45% <br/> lfw_7_lr2lr: 67.70% | lfw_28_hr2lr_interArea: 97.17% <br/> lfw_14_hr2lr_interArea: 94.57% <br/> lfw_7_hr2lr_interArea: 89.15% | lfw: 97.87% <br/> lfw_56: 97.88% <br/> lfw_28: 97.23% <br/> lfw_14: 92.93% <br/> lfw_7: 81.22% |
   | **BinaryFaceNet** | 95.07% | 77.93% | 75.12% | lfw_7: 63.63% <br/> lfw_7_hr2lr_interArea: 58.75% <br/> lfw_14: 80.35% <br/> lfw_14_hr2lr_interArea: 78.18% | lfw_28_lr2lr: 84.93% <br/> lfw_21_lr2lr: 82.48% <br/> lfw_14_lr2lr: 75.55% <br/> lfw_7_lr2lr: 67.53% | lfw_28_hr2lr_interArea: 92.80% <br/> lfw_14_hr2lr_interArea: 89.27% <br/> lfw_7_hr2lr_interArea: 81.65% | lfw: 93.23% <br/> lfw_56: 93.33% <br/> lfw_28: 92.50% <br/> lfw_14: 88.48% <br/> lfw_7: 75.17% |
   
