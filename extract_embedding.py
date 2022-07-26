@@ -5,7 +5,7 @@ from tqdm import tqdm
 import numpy as np
 from sklearn.preprocessing import normalize
 
-from larq.layers import *
+import larq
 
 #Load model
 
