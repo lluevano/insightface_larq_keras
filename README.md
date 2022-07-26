@@ -11,14 +11,14 @@
   ## Binary Network Summary (for 112x112 input)
   
   ### Efficiency
-  
-  | Method | Quantizer | Params | Memory | Binary MACs | Full Precision MACs |
-  | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-  | BinaryDenseNet45 | ste_sign | 13.1 M | 4.29 MiB | 1.59 G | 59.71 M |
-  | BinaryDenseNet37 | ste_sign | 13.1 M | 4.29 MiB | 1.12 G | 48.97 M |
-  | BinaryDenseNet28 | ste_sign | 4.55 M | 1.84 MiB | 893.25 M | 49.99 M |
-  | QuickNet | ste_sign | 12.7 M | 2.21 MiB | 431.75 M | 6.85 M |
-  | **BinaryFaceNet** | DoReFa | 506 K | 1.32 MiB | 184.99 M | 3.85 M |
+  Inference: Larq Compute Engine (LCE) on Nvidia Jetson Nano 2Gb
+  | Method | Quantizer | Params | Memory | Binary MACs | FP MACs | LCE benchmark <br/> runtime (ARM A57) <br/> Single thread |
+  | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+  | BinaryDenseNet45 | ste_sign | 13.1 M | 4.29 MiB | 1.59 G | 59.71 M | 6.25s |
+  | BinaryDenseNet37 | ste_sign | 13.1 M | 4.29 MiB | 1.12 G | 48.97 M | 4.49s |
+  | BinaryDenseNet28 | ste_sign | 4.55 M | 1.84 MiB | 893.25 M | 49.99 M | 3.74s |
+  | QuickNet | ste_sign | 12.7 M | 2.21 MiB | 431.75 M | 6.85 M | 1.86s |
+  | **BinaryFaceNet** | DoReFa | 506 K | 1.32 MiB | 184.99 M | 3.85 M | 0.16s |
 
   ### Accuracy
   
