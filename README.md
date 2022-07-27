@@ -8,7 +8,7 @@
   
   Trained models are available at this [Google Drive link](https://drive.google.com/drive/folders/1XDezVnG-4brzIQ-2C1d0TstGaNy00_CV?usp=sharing)
   
-  ## Binary Network Summary (for 112x112 input)
+  ## Binary Network Summary (for 112x112 input, 128-D embedding)
   
   ### Efficiency
   Inference: Larq Compute Engine (LCE) on Nvidia Jetson Nano 2Gb
