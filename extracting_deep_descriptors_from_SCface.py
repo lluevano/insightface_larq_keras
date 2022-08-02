@@ -184,6 +184,7 @@ def main(args):
         read_image_func = cv2.imread
     elif args.model_type == 'h5':
         model = tf.keras.models.load_model(args.model, compile=False)
+        #read_image_func = lambda img: (tf.cast(tf.image.decode_image(tf.io.read_file(img), channels=3, expand_animations=False),"float32") - 127.5) * 0.0078125
         read_image_func = lambda img: tf.cast(tf.image.decode_image(tf.io.read_file(img), channels=3, expand_animations=False),"float32")
         
     for db in args.eval_datasets:
