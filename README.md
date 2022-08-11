@@ -14,11 +14,11 @@
   Inference: Larq Compute Engine (LCE) on Nvidia Jetson Nano 2Gb
   | Method | Quantizer | Params | Memory | Binary MACs | FP MACs | LCE benchmark <br/> runtime (ARM A57) <br/> Single thread |
   | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-  | BinaryDenseNet45 | ste_sign | 13.1 M | 4.29 MiB | 1.59 G | 59.71 M | 6.25s/image |
-  | BinaryDenseNet37 | ste_sign | 8.06 M | 2.69 MiB | 1.12 G | 48.97 M | 4.49s/image |
-  | BinaryDenseNet28 | ste_sign | 4.55 M | 1.84 MiB | 893.25 M | 49.99 M | 3.74s/image |
-  | QuickNet | ste_sign | 12.7 M | 2.21 MiB | 431.75 M | 6.85 M | 1.86s/image |
-  | **BinaryFaceNet** | DoReFa | 506 K | 1.32 MiB | 184.99 M | 3.85 M | 0.16s/image |
+  | BinaryDenseNet45 | ste_sign | 13.1 M | 4.29 MiB | 1.59 G | 59.71 M | 6.25 sec/image |
+  | BinaryDenseNet37 | ste_sign | 8.06 M | 2.69 MiB | 1.12 G | 48.97 M | 4.49 sec/image |
+  | BinaryDenseNet28 | ste_sign | 4.55 M | 1.84 MiB | 893.25 M | 49.99 M | 3.74 sec/image |
+  | QuickNet | ste_sign | 12.7 M | 2.21 MiB | 431.75 M | 6.85 M | 1.86 sec/image |
+  | **BinaryFaceNet** | DoReFa | 506 K | 1.32 MiB | 184.99 M | 3.85 M | 0.16 sec/image |
 
   ### Accuracy
   
